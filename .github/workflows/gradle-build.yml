@@ -1,0 +1,31 @@
+name: Build Plugin
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout do repositório
+        uses: actions/checkout@v4
+
+      - name: Configurar Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 17
+
+      - name: Permissão ao Gradle
+        run: chmod +x ./gradlew
+
+      - name: Build com Gradle
+        run: ./gradlew build
+
+      - name: Artefato do Plugin (.jar)
+        uses: actions/upload-artifact@v4
+        with:
+          name: plugin-build
+          path: build/libs/*.jar
