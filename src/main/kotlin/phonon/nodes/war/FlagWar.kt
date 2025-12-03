@@ -68,7 +68,7 @@ private val WOOL_COLORS: Array<Byte> = arrayOf(
 
 // 1.16 direct material refs
 private val FLAG_COLORS: Array<Material> = arrayOf(
-    Material.BLACK_WOOL,      // [0.0, 0.1]
+    Material.DEEPSLATE,      // [0.0, 0.1]
     Material.GRAY_WOOL,       // [0.1, 0.2]
     Material.LIGHT_GRAY_WOOL, // [0.2, 0.3]
     Material.BLUE_WOOL,       // [0.3, 0.4]
@@ -87,7 +87,7 @@ private val SKY_BEACON_FRAME_BLOCK = Material.MAGMA_BLOCK // 1.16 use magma
 // contain all flag materials for sky beacon
 private val SKY_BEACON_MATERIALS: EnumSet<Material> = EnumSet.of(
     SKY_BEACON_FRAME_BLOCK,
-    Material.BLACK_WOOL,      // flag wool stuff
+    Material.DEEPSLATE,      // flag wool stuff
     Material.GRAY_WOOL, 
     Material.LIGHT_GRAY_WOOL,
     Material.BLUE_WOOL,  
